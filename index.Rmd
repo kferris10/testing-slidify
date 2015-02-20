@@ -1,11 +1,11 @@
 ---
 title       : Testing Slidify
 subtitle    : A dumping ground where I test out new styles of Slidify
-author      : Stat 217
-date        : today
+author      : Kevin
+today       : " `r Sys.Date()` "
 framework   : bootstrap3
-highlighter : highlight.js  
-hitheme     : tomorrow      
+highlighter : highlight.js 
+hitheme     : github      
 widgets     : []
 layout      : deck3
 mode        : selfcontained 
@@ -40,6 +40,9 @@ take_home <- 0
 
 ## Introduction
 
+[Slidify](slidify.org) is an R package which makes it easy to generate cusomized HTML content from a simple RMarkdown file.  The sure can specify custom templates and 
+
+
 This is where I test out new slidify layouts!
 
 ---
@@ -51,4 +54,18 @@ Using the `cars` data in R
 plot(dist ~ speed, data = cars)
 ```
 
+---
+## An example table using `knitr`
+
+```{r cars-table, results='asis'}
+knitr::kable(head(cars), format = "markdown")
+```
+
+---
+## Some example R output
+
+```{r cars-lm}
+fit1 <- lm(dist ~ speed, data = cars)
+summary(fit1)
+```
 

@@ -15,14 +15,14 @@
   <link rel="stylesheet" href="libraries/frameworks/bootstrap3/css/bootstrap.min.css">
   
   <link rel="stylesheet" href="libraries/frameworks/bootstrap3/css/main.css">
-  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/github.css" />
   <script src="libraries/frameworks/bootstrap3/js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="libraries/frameworks/bootstrap3/js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
     <link rel=stylesheet href="./assets/css/custom.css"></link>
 <link rel=stylesheet href="./assets/css/moving_sidebar.css"></link>
 <link rel=stylesheet href="./assets/css/ribbons.css"></link>
-<link rel=stylesheet href="assets/css/table-styles.css"></link>
+<link rel=stylesheet href="./assets/css/table-styles.css"></link>
 <link rel=stylesheet href="http://fonts.googleapis.com/css?family=Vollkorn"></link>
 <link rel=stylesheet href="http://fonts.googleapis.com/css?family=Droid%20Sans%20Mono"></link>
 
@@ -49,20 +49,26 @@
         <div class="jumbotron">
           <div class="container">
             <h1>Testing Slidify</h1>
-            <h3>Stat 217</h3>
+            <h3>A dumping ground where I test out new styles of Slidify</h3>
+            <h3>Kevin</h3>
+            <h3> 2015-02-19 </h3>
           </div>
         </div>
 
         <section id="slide-1">
   <div class="page-header">
     <h2>Introduction</h2>
+  <hr>
   </div>
-  <p>This is where I test out new slidify layouts!</p>
+  <p><a href="slidify.org">Slidify</a> is an R package which makes it easy to generate cusomized HTML content from a simple RMarkdown file.  The sure can specify custom templates and </p>
+
+<p>This is where I test out new slidify layouts!</p>
 
 </section>
 <section id="slide-2">
   <div class="page-header">
     <h2>An example plot</h2>
+  <hr>
   </div>
   <p>Using the <code>cars</code> data in R</p>
 
@@ -70,6 +76,75 @@
 </code></pre>
 
 <p><img src="assets/fig/cars-plot-1.png" title="plot of chunk cars-plot" alt="plot of chunk cars-plot" style="display: block; margin: auto;" /></p>
+
+</section>
+<section id="slide-3">
+  <div class="page-header">
+    <h2>An example table using <code>knitr</code></h2>
+  <hr>
+  </div>
+  <pre><code class="r">knitr::kable(head(cars), format = &quot;markdown&quot;)
+</code></pre>
+
+<table><thead>
+<tr>
+<th align="right">speed</th>
+<th align="right">dist</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="right">4</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td align="right">22</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td align="right">10</td>
+</tr>
+</tbody></table>
+
+</section>
+<section id="slide-4">
+  <div class="page-header">
+    <h2>Some example R output</h2>
+  <hr>
+  </div>
+  <pre><code class="r">fit1 &lt;- lm(dist ~ speed, data = cars)
+summary(fit1)
+</code></pre>
+
+<pre><code>#&gt; 
+#&gt; Call:
+#&gt; lm(formula = dist ~ speed, data = cars)
+#&gt; 
+#&gt; Residuals:
+#&gt;    Min     1Q Median     3Q    Max 
+#&gt; -29.07  -9.53  -2.27   9.21  43.20 
+#&gt; 
+#&gt; Coefficients:
+#&gt;             Estimate Std. Error t value Pr(&gt;|t|)
+#&gt; (Intercept)  -17.579      6.758   -2.60    0.012
+#&gt; speed          3.932      0.416    9.46  1.5e-12
+#&gt; 
+#&gt; Residual standard error: 15.4 on 48 degrees of freedom
+#&gt; Multiple R-squared:  0.651,  Adjusted R-squared:  0.644 
+#&gt; F-statistic: 89.6 on 1 and 48 DF,  p-value: 1.49e-12
+</code></pre>
 
 </section>
 
@@ -82,6 +157,10 @@
             <li><a href = "#slide-1"> Introduction</a></li>
 
             <li><a href = "#slide-2"> An example plot</a></li>
+
+            <li><a href = "#slide-3"> An example table using <code>knitr</code></a></li>
+
+            <li><a href = "#slide-4"> Some example R output</a></li>
           </ul>
         </div>
       </div>  <!-- end sidebar -->
@@ -92,7 +171,7 @@
       <!-- Footer -->
       <footer id="top" role="footer">
         <div class="container text-center">
-          <span class="text-muted">Built by <a href="http://slidify.org/">Slidify</a>.  Styled using <a href="http://getbootstrap.com/">Bootstrap</a>.  Theme by <a href="http://bootswatch.com/">Bootswatch</a>.  Hosted on <a href="https://github.com/">GitHub</a>.</span>
+          <span class="text-muted">Built by <a href="http://slidify.org/">Slidify</a>.  Styled using <a href="http://getbootstrap.com/">Bootstrap</a>.  Hosted on <a href="https://github.com/">GitHub</a>.</span>
         </div>
       </footer>
 
